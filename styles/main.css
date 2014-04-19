@@ -7,16 +7,51 @@ body {
 
 .jumbotron {
 	background-color:			rgba(194, 231, 195, 0.8);
+	width:						60%;
+	margin:						auto;
+
 }
 
-.btn-primary {
+.btn {
 	margin:						20px auto;
-	margin-right:				;
+	width:						30%;
 }
 
-.formcontrol {
+.bikeInput {
+	width:						40%;
+	margin:						auto;
+}
+
+.result {
+	height:						100px;
+	width:						60%;
+	margin:						auto;
+	background-color:			rgba(194, 231, 195, 0.8);
+}
+
+@media (max-width: 480px) {
+ .jumbotron {
+	background-color:			rgba(194, 231, 195, 0.8);
+	width:						80%;
+	margin:						auto;
+
+}
+
+.btn {
+	margin:						20px auto;
+	width:						40%;
+}
+
+.bikeInput {
 	width:						80%;
 	margin:						auto;
 }
 
+.result {
+	height:						100px;
+	width:						80%;
+	margin:						auto;
+	background-color:			rgba(194, 231, 195, 0.8);
+}
+}
 

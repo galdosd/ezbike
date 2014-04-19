@@ -13,23 +13,32 @@
 		<fieldset>
 
 			<div class="form-group">
-				<button class="btn btn-primary">Use your location</button>
+				<button class="btn btn-primary btn-lg btn-block">Use your location</button>
 			</div>
 
-			<div class="form-group">
-				<input class="form-control" id="to" type="text" placeholder="start">
-			</div>	
-
-			<div class="form-group">
-				<input class="form-control" id="from" type="text" placeholder="end">
+			<div class="bikeInput">
+				<div class="form-group">
+					<input class="form-control" id="from" type="text" placeholder="start">
+				</div>	
 			</div>
 
+			<div class="bikeInput">
+				<div class="form-group">
+					<input class="form-control" id="to" type="text" placeholder="finish">
+				</div>	
+			</div>
+
+
 			<div class="form-group">
-              	<button class="btn btn-primary">Go</button>
-            </div>
+				<button class="btn btn-primary btn-lg btn-block">Go</button>
+			</div>
 
 		</fieldset>
 	</form>
+
+	<div class="result">
+
+	</div>
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
     <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
     <script src='javascript/main.js'></script>
