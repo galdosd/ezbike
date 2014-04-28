@@ -8,7 +8,7 @@ use Math::Trig qw/ pi great_circle_distance /;
 
 my $min_bikes = 5;
 my $min_docks = 5;
-my $home = [ 40.71, -73.95 ];
+my $home = [ 40.715, -73.955 ];
 my $work = [ 40.702419,-74.012398 ];
 
 # ($home, $work) = ($work, $home);
@@ -27,15 +27,13 @@ my %station_info = map {
 } @{ $stations };
 
 
-print "Content-type: text/plain\n\n";
+print "Content-type: application/json\n\n";
 
-print_tour('home' => 'work');
+my $tour = compute_tour('home' => 'work');
+print JSON::PP->new->utf8->encode($tour);
+exit 0;
 
-print "\n\n=======\n\n";
-
-print_tour( 'work' => 'home' );
-
-sub print_tour {
+sub compute_tour {
     my ($start, $finish) = @_;
     my @home_stations = nearest_stations(
         Location => $start,
@@ -46,27 +44,10 @@ sub print_tour {
         Location => $finish,
         Docks => $min_docks,
     );
-
-
-    for my $s (@home_stations[0..2]) {
-            print_station( $s, qr/$start|bikes/ );
-    }
-    print "\n------>\n\n";
-    for my $s (@work_stations[0..2]) {
-            print_station( $s, qr/$finish|docks/ );
-    }
-}
-sub print_station {
-    my ($s, $re_filter) = @_;
-    print "\n$s\n"; 
-    for my $k (keys %{ $station_info{$s} }) {
-        next unless $k =~ $re_filter;
-        my $val = $station_info{$s}->{$k};
-        $val = int($val) unless $k =~ /^service$/;
-        my $spec = "";
-        $spec = " blocks from " if $k !~ /^(service|bikes|docks)$/;
-        print "\t$val  $spec$k\n";
-    }
+    return {
+        begin_at => \@home_stations,
+        finish_at => \@work_stations,
+    };
 }
 
 sub nearest_stations {
