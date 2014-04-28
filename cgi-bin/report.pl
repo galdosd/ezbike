@@ -45,8 +45,8 @@ sub compute_tour {
         Docks => $min_docks,
     );
     return {
-        begin_at => \@home_stations,
-        finish_at => \@work_stations,
+        begin_at => map { $station_info{$_} } @home_stations[0..2],
+        finish_at => map { $station_info{$_} } @work_stations[0..2],
     };
 }
 
