@@ -19,6 +19,9 @@ my %station_info = map {
         bikes => $s->{availableBikes},
         docks => $s->{availableDocks},
         service => $s->{statusValue} eq "In Service",
+        latitude => $s->{latitude},
+        longitude => $s->{longitude},
+        name => $s->{stationName},
         home => earth_distance( @$home, $s->{latitude}, $s->{longitude} ),
         work => earth_distance( @$work, $s->{latitude}, $s->{longitude} ),
     }
