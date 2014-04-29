@@ -44,12 +44,11 @@ sub compute_tour {
         Docks => $min_docks,
     );
 
-    my  @home_station_info, @work_station_info;
+    my ( @home_station_info, @work_station_info);
     for my $s (@home_stations[0..2]) {
          push @home_station_info, $station_info{$s};
     }
     for my $s (@work_stations[0..2]) {
-        %{ $station_info{$s} }
          push @work_station_info, $station_info{$s};
     }
     return {
