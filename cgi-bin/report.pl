@@ -11,8 +11,6 @@ my $min_docks = 5;
 my $home = [ 40.715, -73.955 ];
 my $work = [ 40.702419,-74.012398 ];
 
-# ($home, $work) = ($work, $home);
-
 my $stations = JSON::PP->new->ascii->decode(`curl -s https://citibikenyc.com/stations/json/`)->{stationBeanList};
 
 my %station_info = map {
@@ -26,9 +24,7 @@ my %station_info = map {
     }
 } @{ $stations };
 
-
 print "Content-type: application/json\n\n";
-
 my $tour = compute_tour('home' => 'work');
 print JSON::PP->new->utf8->encode($tour);
 exit 0;
@@ -44,9 +40,18 @@ sub compute_tour {
         Location => $finish,
         Docks => $min_docks,
     );
+
+    my  @home_station_info, @work_station_info;
+    for my $s (@home_stations[0..2]) {
+         push @home_station_info, $station_info{$s};
+    }
+    for my $s (@work_stations[0..2]) {
+        %{ $station_info{$s} }
+         push @work_station_info, $station_info{$s};
+    }
     return {
-        begin_at => map { $station_info{$_} } @home_stations[0..2],
-        finish_at => map { $station_info{$_} } @work_stations[0..2],
+        begin_at => \@home_station_info,
+        finish_at => \@work_station_info
     };
 }
 
