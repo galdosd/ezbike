@@ -59,10 +59,10 @@ sub compute_tour {
 
     my ( @home_station_info, @work_station_info);
     for my $s (@home_stations[0..2]) {
-         push @home_station_info, $station_info{$s};
+         push @home_station_info, denormalize('home', 'bikes', $s);
     }
     for my $s (@work_stations[0..2]) {
-         push @work_station_info, $station_info{$s};
+         push @work_station_info, denormalize('work', 'docks', $s);
     }
     return {
         begin_at => \@home_station_info,
@@ -83,15 +83,22 @@ sub nearest_stations {
 
         next unless $station_info{$s}->{service};
         next unless $station_info{$s}->{$resource} >= $min_resources;
-        $station_info{$s}->{slots} = $station_info{$s}->{$resource};
-        $station_info{$s}->{blocks} = $station_info{$s}->{$location};
         push @res, $s;
 
     }
     return @res;
 }
 
+sub denormalize {
+    my ($location,$resource, $s) =@_;
 
+    my $h_station = $station_info{$s} ;
+    my $h_rstation = { %$h_station }; # copy it
+
+    $h_rstation->{slots} = $station_info{$s}->{$resource};
+    $h_rstation->{blocks} = $station_info{$s}->{$location};
+    return $h_rstation;
+}
 
 sub earth_distance {
     my $Earth_radius_in_miles = 3963.1906;
