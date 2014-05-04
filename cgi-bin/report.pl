@@ -16,7 +16,7 @@ my $work = [ clean_param($cgi, 'work_latitude', 40.707), clean_param($cgi, 'work
 sub clean_param {
     my ($cgi, $param_name, $default_value) = @_;
     my $param_value = $cgi->param($param_name);
-    if(defined $param_value && "$param_value" =~ /^(0|[1-9]\d*)(\.\d+)?$/) {
+    if(defined $param_value && "$param_value" =~ /^-?\d+(\.\d*)?$/) {
         return 1.0 * $param_value;
     }
     else {
