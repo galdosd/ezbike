@@ -1,15 +1,28 @@
-#!/usr/bin/env perl
+#!/usr/bin/perl
 
 use strict; 
 use warnings;
+use CGI;
+my $cgi = CGI->new;
 use JSON::PP;
 use Data::Dumper;
 use Math::Trig qw/ pi great_circle_distance /;
 
 my $min_bikes = 5;
 my $min_docks = 5;
-my $home = [ 40.715, -73.955 ];
-my $work = [ 40.702419,-74.012398 ];
+my $home = [ clean_param($cgi, 'home_latitude', 40.714), clean_param($cgi, 'home_longitude', -73.99) ];
+my $work = [ clean_param($cgi, 'work_latitude', 40.707), clean_param($cgi, 'work_longitude', -74.01) ];
+
+sub clean_param {
+    my ($cgi, $param_name, $default_value) = @_;
+    my $param_value = $cgi->param($param_name);
+    if(defined $param_value && "$param_value" =~ /^(0|[1-9]\d*)(\.\d+)?$/) {
+        return 1.0 * $param_value;
+    }
+    else {
+        return $default_value;
+    }
+}
 
 my $stations = JSON::PP->new->ascii->decode(`curl -s https://citibikenyc.com/stations/json/`)->{stationBeanList};
 
@@ -29,7 +42,7 @@ my %station_info = map {
 
 print "Content-type: application/json\n\n";
 my $tour = compute_tour('home' => 'work');
-print JSON::PP->new->utf8->encode($tour);
+print JSON::PP->new->utf8->canonical->pretty->encode($tour);
 exit 0;
 
 sub compute_tour {
@@ -70,7 +83,8 @@ sub nearest_stations {
 
         next unless $station_info{$s}->{service};
         next unless $station_info{$s}->{$resource} >= $min_resources;
-        # push @res, $station_info{$s};
+        $station_info{$s}->{slots} = $station_info{$s}->{$resource};
+        $station_info{$s}->{blocks} = $station_info{$s}->{$location};
         push @res, $s;
 
     }
