@@ -46,9 +46,9 @@
     		 	var start0 = $( '#start0' );
     		 	var start1 = $( '#start1' );
     		 	var start2 = $( '#start2' );
-    		 	var end0 = $( '#end0' );
-    		 	var end1 = $( '#end1' );
-    		 	var end2 = $( '#end2' );
+    		 	var finish0 = $( '#finish0' );
+    		 	var finish1 = $( '#finish1' );
+    		 	var finish2 = $( '#finish2' );
     		 	var tooFar = data.begin_at[0].blocks
     		 	var warning = $( '.warning');
     		 	start0.text(
@@ -75,7 +75,7 @@
     		 		+ data.begin_at[2].blocks 
     		 		+ " blocks away"
     		 	);
-    		 	end0.text(
+    		 	finish0.text(
     		 		data.finish_at[0].slots
     		 		+ " docks at "
     		 		+ data.finish_at[0].name 
@@ -83,7 +83,7 @@
     		 		+ data.finish_at[0].blocks 
     		 		+ " blocks away"
     		 	);
-    		 	end1.text(
+    		 	finish1.text(
     		 		data.finish_at[1].slots
     		 		+ " docks at "
     		 		+ data.finsh_at[1].name
@@ -91,7 +91,7 @@
     		 		+ data.finsh_at[1].blocks
     		 		+ " blocks away"
     		 	);
-    		 	end2.text(
+    		 	finish2.text(
     		 		data.finish_at[2].slots
     		 		+ " docks at "
     		 		+(data.finish_at[2].name) 
