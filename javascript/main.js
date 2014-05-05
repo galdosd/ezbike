@@ -43,11 +43,18 @@
     		+"&work_longitude=-73.989",
     		 function ( data ) {
     		 	var result = $ ( '#result');
-    		 	result.text( (data.begin_at[0].name) 
-    		 		+ ( "," )
+    		 	var tooFar = data.begin_at[0].blocks
+    		 	result.text(
+    		 		"begin at "
+    		 		+(data.begin_at[0].name) 
+    		 		+ ( " , " )
     		 		+ ( data.begin_at[0].blocks ) 
-    		 		+ "blocks away"
+    		 		+ " blocks away"
     		 	);
+    		 	if(tooFar > 20) {
+    		 		result.text("maybe you shouldn't bike");
+    		 	}
+
     		 }
     	); 
 
