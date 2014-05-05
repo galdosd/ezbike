@@ -53,7 +53,7 @@
     		 	var warning = $( '.warning');
     		 	start0.text(
     		 		data.begin_at[0].slots
-    		 		+ " at "
+    		 		+ " bikes at "
     		 		+ data.begin_at[0].name  
     		 		+ ", " 
     		 		+ data.begin_at[0].blocks  
@@ -61,39 +61,42 @@
     		 	);
     		 	start1.text(
     		 		data.begin_at[1].slots
-    		 		+ " at "
-    		 		+(data.begin_at[1].name) 
-    		 		+ ( ", " )
-    		 		+ ( data.begin_at[1].blocks ) 
+    		 		+ " bikes at "
+    		 		+ data.begin_at[1].name 
+    		 		+ ", " 
+    		 		+ data.begin_at[1].blocks 
     		 		+ " blocks away"
     		 	);
     		 	start2.text(
     		 		data.begin_at[2].slots
-    		 		+ " at "
-    		 		+(data.begin_at[2].name) 
-    		 		+ ( ", " )
-    		 		+ ( data.begin_at[2].blocks ) 
+    		 		+ " bikes at "
+    		 		+ data.begin_at[2].name
+    		 		+ ", " )
+    		 		+ data.begin_at[2].blocks 
     		 		+ " blocks away"
     		 	);
     		 	end0.text(
-    		 		"Begin at "
-    		 		+(data.finish_at[0].name) 
-    		 		+ ( ", " )
-    		 		+ ( data.finish_at[0].blocks ) 
+    		 		data.finish_at[0].slots
+    		 		+ " docks at "
+    		 		+ data.finish_at[0].name 
+    		 		+ ", " 
+    		 		+ data.finish_at[0].blocks 
     		 		+ " blocks away"
     		 	);
     		 	end1.text(
-    		 		"or "
-    		 		+(data.finsh_at[0].name) 
-    		 		+ ( ", " )
-    		 		+ ( data.finsh_at[0].blocks ) 
+    		 		data.finish_at[1].slots
+    		 		+ " docks at "
+    		 		+ data.finsh_at[1].name
+    		 		+ ", " 
+    		 		+ data.finsh_at[1].blocks
     		 		+ " blocks away"
     		 	);
     		 	end2.text(
-    		 		"or "
-    		 		+(data.finish_at[0].name) 
+    		 		data.finish_at[2].slots
+    		 		+ " docks at "
+    		 		+(data.finish_at[2].name) 
     		 		+ ( ", " )
-    		 		+ ( data.finish_at[0].blocks ) 
+    		 		+ ( data.finish_at[2].blocks ) 
     		 		+ " blocks away"
     		 	);
     		 	if(tooFar > 20) {
