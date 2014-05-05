@@ -1,3 +1,6 @@
+/*jslint couch: false, node: false, rhino: false, passfail: false, debug: true, plusplus: true, vars: true, white: true */
+/*globals $ */
+
 (function(){
 
 	$(document).ready(function(){
@@ -37,7 +40,7 @@
 		
     */
 
-    	jQuery.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
+    	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
     		+"home_latitude=5.5"
     		+"&home_longitude=0"
     		+"&work_latitude=40.714"
