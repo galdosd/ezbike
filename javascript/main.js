@@ -34,7 +34,7 @@
 			}
 
 
-			else {
+			//else {
 				$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 				+"home_latitude=5.5"
 				+"&home_longitude=0"
@@ -103,7 +103,7 @@
 
 				}
 				); 
-      		}
+      		//}
 
       }
       );
