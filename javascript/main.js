@@ -35,8 +35,9 @@
 
 
       	// if we made it here, then valid
-      	//var end2 = $( '.end2' );
-      	//end2.text( finalChoice2 );	
+      	else { 
+      		console.log('success');
+      	}	
       }
       );
 
