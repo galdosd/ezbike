@@ -89,7 +89,7 @@
     		 	finish1.text(
     		 		data.finish_at[1].slots
     		 		+ " docks at "
-    		 		+ data.finsh_at[1].name
+    		 		+ data.finish_at[1].name
     		 		+ ", " 
     		 		+ data.finsh_at[1].blocks
     		 		+ " blocks away"
