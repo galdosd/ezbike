@@ -91,7 +91,7 @@
     		 		+ " docks at "
     		 		+ data.finish_at[1].name
     		 		+ ", " 
-    		 		+ data.finsh_at[1].blocks
+    		 		+ data.finish_at[1].blocks
     		 		+ " blocks away"
     		 	);
     		 	finish2.text(
