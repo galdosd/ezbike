@@ -27,7 +27,7 @@ body {
 	margin:						auto;
 }
 
-.result {
+#result {
 	height:						100px;
 	width:						55%;
 	margin:						auto;
