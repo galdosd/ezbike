@@ -5,7 +5,8 @@
 
 	$(document).ready(function(){
 
-	/*useLo = $( '#useLo' );
+//form verification start
+	useLo = $( '#useLo' );
 	Go = $( '#go' );
 	Go.on(
 	'click'
@@ -22,23 +23,25 @@
 				return;
 			}
 
-			var start = $( '#finish' ).val();
+			var finish = $( '#finish' ).val();
 
 
-			if ( start == "" || start == " " ) {
-				alert( 'where you at?' );
+			if ( finish == "" || finish == " " ) {
+				alert( 'where you going to?' );
 				e.stopPropagation();
 				//done
 				return;
 			}
 
       	// if we made it here, then valid
-      	var end2 = $( '.end2' );
-      	end2.text( finalChoice2 );	
+      	//var end2 = $( '.end2' );
+      	//end2.text( finalChoice2 );	
       }
       );
+
+	//form verification end
 		
-    */
+    
 
     	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
     		+"home_latitude=5.5"
