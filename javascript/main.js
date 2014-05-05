@@ -55,6 +55,20 @@
     		 		+ ( data.begin_at[0].blocks ) 
     		 		+ " blocks away"
     		 	);
+    		 	start1.text(
+    		 		"or "
+    		 		+(data.begin_at[0].name) 
+    		 		+ ( ", " )
+    		 		+ ( data.begin_at[0].blocks ) 
+    		 		+ " blocks away"
+    		 	);
+    		 	start2.text(
+    		 		"or "
+    		 		+(data.begin_at[0].name) 
+    		 		+ ( ", " )
+    		 		+ ( data.begin_at[0].blocks ) 
+    		 		+ " blocks away"
+    		 	);
     		 	if(tooFar > 20) {
     		 		warning.text("That's pretty far bro, maybe you shouldn't bike");
     		 	}
