@@ -42,17 +42,18 @@
     		+"&work_latitude=40.714"
     		+"&work_longitude=-73.989",
     		 function ( data ) {
-    		 	var result = $ ( '#result');
+    		 	var startC = $( '.startChoices');
     		 	var tooFar = data.begin_at[0].blocks
-    		 	result.text(
-    		 		"begin at "
+    		 	var warning = $( '.warning');
+    		 	startC.text(
+    		 		"Begin at "
     		 		+(data.begin_at[0].name) 
     		 		+ ( " , " )
     		 		+ ( data.begin_at[0].blocks ) 
     		 		+ " blocks away"
     		 	);
     		 	if(tooFar > 20) {
-    		 		result.text("maybe you shouldn't bike");
+    		 		warning.text("maybe you shouldn't bike");
     		 	}
 
     		 }
