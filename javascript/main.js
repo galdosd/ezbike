@@ -43,12 +43,12 @@
     		+"&work_latitude=40.714"
     		+"&work_longitude=-73.989",
     		 function ( data ) {
+    		 	var start0 = $( '.start0' );
     		 	var start1 = $( '.start1' );
     		 	var start2 = $( '.start2' );
-    		 	var start3 = $( '.start3' );
     		 	var tooFar = data.begin_at[0].blocks
     		 	var warning = $( '.warning');
-    		 	start1.text(
+    		 	start0.text(
     		 		"Begin at "
     		 		+(data.begin_at[0].name) 
     		 		+ ( ", " )
