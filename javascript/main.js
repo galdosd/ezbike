@@ -33,6 +33,7 @@
 				return;
 			}
 
+
       	// if we made it here, then valid
       	//var end2 = $( '.end2' );
       	//end2.text( finalChoice2 );	
