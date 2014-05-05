@@ -71,7 +71,7 @@
     		 		data.begin_at[2].slots
     		 		+ " bikes at "
     		 		+ data.begin_at[2].name
-    		 		+ ", " )
+    		 		+ ", " 
     		 		+ data.begin_at[2].blocks 
     		 		+ " blocks away"
     		 	);
