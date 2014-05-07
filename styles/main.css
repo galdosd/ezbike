@@ -5,11 +5,12 @@ body {
 	background-repeat: 			no-repeat;
 }
 
-.jumbotron {
+.title {
 	background-color:			rgba(194, 231, 195, 0.8);
 	width:						60%;
 	margin:						auto;
 	margin-top:					20px;
+	padding:					20px;
 	height:						120px;
 
 }
