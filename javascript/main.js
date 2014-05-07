@@ -12,6 +12,8 @@
 	'click'
 	, function( e ) {
 
+	e.preventDefault();
+
 			// grab the task in the input field
 			var start = $( '#start' ).val();
 
@@ -36,12 +38,12 @@
 
       	// if we made it here, then valid
       	else { $.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
-    		//+start
-    		//+finish ,
-    		+"home_latitude=5.5"
-    		+"&home_longitude=0"
-    		+"&work_latitude=40.714"
-    		+"&work_longitude=-73.989",
+    		+start
+    		+finish ,
+    		//+"home_latitude=5.5"
+    		//+"&home_longitude=0"
+    		//+"&work_latitude=40.714"
+    		//+"&work_longitude=-73.989",
     		 function ( data ) {
     		 	var start0 = $( '#start0' );
     		 	var start1 = $( '#start1' );
