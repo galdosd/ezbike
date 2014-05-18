@@ -24,7 +24,7 @@ sub clean_param {
     }
 }
 
-my $stations = JSON::PP->new->ascii->decode(`curl -s https://citibikenyc.com/stations/json/`)->{stationBeanList};
+my $stations = JSON::PP->new->ascii->decode(`curl -s https://www.citibikenyc.com/stations/json/`)->{stationBeanList};
 
 my %station_info = map {
     my $s=$_;
