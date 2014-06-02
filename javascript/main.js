@@ -5,6 +5,12 @@
 
 	$(document).ready(function(){
 
+        function show_map(position) {
+  var latitude = position.coords.latitude;
+  var longitude = position.coords.longitude;
+  // let's show a map or do something interesting!
+}
+
 //form verification start
 	useLo = $( '#useLo' );
 	Go = $( '#go' );
