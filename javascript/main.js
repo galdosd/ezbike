@@ -52,7 +52,7 @@
     		//+"&work_longitude=-73.989",
             $.each(results[0].address_components, function(){
              $("#start").find('input[name="'+ this.types+'"]').attr('value', this.long_name);
-            });
+            };
 
     		 function ( data ) {
     		 	var start0 = $( '#start0' );
