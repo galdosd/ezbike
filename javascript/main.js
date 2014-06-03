@@ -50,6 +50,10 @@
     		//+"&home_longitude=0"
     		//+"&work_latitude=40.714"
     		//+"&work_longitude=-73.989",
+            $.each(results[0].address_components, function(){
+             $("#start").find('input[name="'+ this.types+'"]').attr('value', this.long_name);
+            });
+
     		 function ( data ) {
     		 	var start0 = $( '#start0' );
     		 	var start1 = $( '#start1' );
