@@ -1,59 +1,23 @@
 <!doctype html>
 <html>
 <head>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title >ezbike</title>
-    <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='styles/main.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>example</title>
 </head>
 <body>
-    <div class="title"><h1>EZBIKE</h1>
-    	<p>The easiest way to get from a to b on a citibike</p>
-    </div>
+	<div id="click" >Click!</div>
+	<div id="work" >Work</div>
 
-    <form class="ezbikeInput">
-		<fieldset>
+	<div id="where">Put stuff here</div>
 
-			<div class="form-group">
-				<button class="btn btn-primary btn-lg btn-block" id="useLo">Use your location</button>
-			</div>
+	<div id="start0">start</div>
 
-			<div class="bikeInput">
-				<div class="form-group">
-					<input class="form-control" id="start" type="text" placeholder="start">
-				</div>	
-			</div>
-
-			<div class="bikeInput">
-				<div class="form-group">
-					<input class="form-control" id="finish" type="text" placeholder="finish">
-				</div>	
-			</div>
-
-
-			<div class="form-group" id="go">Go
-				<button class="btn btn-primary btn-lg btn-block">Go</button>
-			</div>
-
-		</fieldset>
-	</form>
-
-	<div id="resultArea">
-
-		<div class="startChoices">
-			<div id ="start0"></div>
-			<div id ="start1"></div>
-			<div id ="start2"></div>
-		</div>
-		<div class="finishChoices"></div>
-			<div id ="finish0"></div>
-			<div id ="finish1"></div>
-			<div id ="finish2"></div>
-		<div class="warning"></div>
-
-	</div>
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
-    <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
-    <script src='javascript/main.js'></script>
+	<!-- when you click button display lat and long
+	1 get some code to run when you click it
+	2 retreive the geolocation info 
+	3 use lat and long in api
+	4 stick it in the div
+-->
+ <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script src='direction.js'></script>
 </body>
-</html>
