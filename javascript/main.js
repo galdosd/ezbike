@@ -5,12 +5,6 @@
 
 	$(document).ready(function(){
 
-        function show_map(position) {
-  var latitude = position.coords.latitude;
-  var longitude = position.coords.longitude;
-  // let's show a map or do something interesting!
-}
-
 //form verification start
 	useLo = $( '#useLo' );
 	Go = $( '#go' );
@@ -42,6 +36,8 @@
 			}
 
 
+
+
       	// if we made it here, then valid
       	else { $.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
     		+start
@@ -52,7 +48,7 @@
     		//+"&work_longitude=-73.989",
             $.each(results[0].address_components, function(){
              $("#start").find('input[name="'+ this.types+'"]').attr('value', this.long_name);
-            };
+            }
 
     		 function ( data ) {
     		 	var start0 = $( '#start0' );
@@ -115,7 +111,7 @@
     		 		warning.text("That's pretty far bro, maybe you shouldn't bike");
     		 	}
 
-    		 }
+    		 };
     	); 
       		
       	}	
