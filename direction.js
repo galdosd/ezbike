@@ -29,7 +29,7 @@ var work = $( "#work" );
 			+"&work_latitude=55.714"
 			+"&work_longitude=-65.989"
 	    );
-	    function work( data ) {
+	    function GO( data ) {
 	    	var start0 = $( '#start0' );
 	    	start0.text(
 	    		 data.begin_at[0].slots
