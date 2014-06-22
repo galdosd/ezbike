@@ -17,8 +17,7 @@ function callNav(){
 		var longitude = position.coords.longitude;
 		where.text( "The latitude is "
 		 + latitude
-		  + " and the longitude is " + longitude + " good luck");
-
+		 + " and the longitude is " + longitude + " good luck");
 		callApi( latitude, longitude );
 	}); 
 };
@@ -35,15 +34,20 @@ function callApi( hLatitude, hLongitude ){
     );
 };
 
-
 function answer( data ) {
-	var start0 = $( '#start0' );
-	start0.text(
-		 data.begin_at[0].slots
+    put_data_into_start( data, 0 );
+    put_data_into_start( data, 1 );
+    put_data_into_start( data, 2 );
+};
+
+function put_data_into_start( data, number ) {
+	var start = $( '#start' + number );
+	start.text(
+		 data.begin_at[ number ].slots
 		 + " bikes at "
-		 + data.begin_at[0].name  
+		 + data.begin_at[ number ].name  
 		 + ", " 
-		 + data.begin_at[0].blocks  
+		 + data.begin_at[ number ].blocks  
 		 + " blocks away"
 	);
 };
