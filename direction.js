@@ -27,9 +27,12 @@ var work = $( "#work" );
 			+"&home_longitude="
 			+longitude
 			+"&work_latitude=55.714"
-			+"&work_longitude=-65.989"
+			+"&work_longitude=-65.989",
+			 $.each(results[0].address_components, function(){
+             $("#start").find('input[name="'+ this.types+'"]').attr('value', this.long_name);
+            }
 	    );
-	    function GO( data ) {
+	    function work( data ) {
 	    	var start0 = $( '#start0' );
 	    	start0.text(
 	    		 data.begin_at[0].slots
