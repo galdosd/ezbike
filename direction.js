@@ -30,8 +30,7 @@ var work = $( "#work" );
 			+"&work_longitude=-65.989",
 			 $.each(results[0].address_components, function(){
              $("#start").find('input[name="'+ this.types+'"]').attr('value', this.long_name);
-            }
-	    );
+            };
 	    function work( data ) {
 	    	var start0 = $( '#start0' );
 	    	start0.text(
