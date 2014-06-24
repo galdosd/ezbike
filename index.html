@@ -5,14 +5,29 @@
     <title>online example</title>
 </head>
 <body>
-	<div id="go" >Click!</div>
-	<div id="work" >Work</div>
+	
+	<div id="go" >Use your location</div>
+	<form>
+	  	Address:    <input name="formatted_address" type="text" value="">
+	</form>
+
+	<input id="find" type="button" value"go"/>
 
 	<div id="where">Put stuff here</div>
 
-	<div id="start0">start</div>
-	<div id="start1">start</div>
-	<div id="start2">start</div>
+	<div class="details">
+  		Latitude:     <span data-geo="lat" />
+  	</div>
+
+  	<div class="details">
+  		Longitude:    <span data-geo="lng" />
+  	</div>
+
+
+		<div id="start0">start</div>
+		<div id="start1">start</div>
+		<div id="start2">start</div>
+
 
 	<!-- when you click button display lat and long
 	1 get some code to run when you click it
@@ -21,5 +36,7 @@
 	4 stick it in the div
 -->
  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+ <script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+ <script src="javascript/jquery.geocomplete.js"></script>
 <script src='direction.js'></script>
 </body>
