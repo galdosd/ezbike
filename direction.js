@@ -45,10 +45,10 @@ var how = $( "#all" );
 how.click( How );
 
 function How(){
-	var hlatitude = $( "#startLat" );
-	var hlongitude =$( "#startLong" );
-	var wlatitude = $( "#endLat" );
-	var wlongitude =$( "#endLong" );
+	var hLatitude = $( "#startLat" );
+	var hLongitude =$( "#startLong" );
+	var wLatitude = $( "#endLat" );
+	var wLongitude =$( "#endLong" );
 	callApi(  hLatitude, hLongitude, wLatitude, wLongitude );
 };
 
