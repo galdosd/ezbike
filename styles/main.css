@@ -5,6 +5,10 @@ body {
 	background-repeat: 			no-repeat;
 }
 
+.hide {
+	display:					none;
+}
+
 .title {
 	background-color:			rgba(194, 231, 195, 0.8);
 	width:						60%;
