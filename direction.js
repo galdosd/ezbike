@@ -63,28 +63,25 @@ function callApiE( wLatitude, wLongitude ){
 		+"&home_longitude="
 		+wLongitude
 		+"&work_latitude=55.714"
-		+"&work_longitude=-65.989", answer
+		+"&work_longitude=-65.989", answerE
     );
 };
 
 function answer( data ) {
-    put_data_into( data, 0 );
-    put_data_into( data, 1 );
-    put_data_into( data, 2 );
+    put_data_into( data, "start", 0 );
+    put_data_into( data, "start", 1 );
+    put_data_into( data, "start", 2 );
 };
 
-function put_data_into( data, number ) {
-	var start = $( '#start' + number );
-	var end = $( "#end" + number);
+function answerE( data ) {
+    put_data_into( data, "end", 0 );
+    put_data_into( data, "end", 1 );
+    put_data_into( data, "end", 2 );
+};
+
+function put_data_into( data, sORe, number ) {
+	var start = $( "#" + sORe + number );
 	start.text(
-		 data.begin_at[ number ].slots
-		 + " bikes at "
-		 + data.begin_at[ number ].name  
-		 + ", " 
-		 + data.begin_at[ number ].blocks  
-		 + " blocks away"
-	);
-	end.text(
 		 data.begin_at[ number ].slots
 		 + " bikes at "
 		 + data.begin_at[ number ].name  
