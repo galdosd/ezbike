@@ -23,7 +23,7 @@ function callNav(){
 	}); 
 };
 
-/*var inputS = $( "#sFind" );
+var inputS = $( "#sFind" );
 inputS.click( inputStart );
 
 function inputStart(){
@@ -32,14 +32,14 @@ function inputStart(){
 	callApiS( latitude, longitude );
 };
 
-var inputE = $( "#eFind" );
+/*var inputE = $( "#eFind" );
 inputE.click( inputEnd );
 
 function inputEnd(){
 	var latitude = $( "#endLat" );
 	var longitude =$( "#endLong" );
 	callApiE( latitude, longitude ); 
-}*/
+}
 
 var how = $( "#all" );
 how.click( How );
@@ -64,9 +64,9 @@ function callApi( hLatitude, hLongitude, wLatitude, wLongitude ){
 		+wLongitude, answer,
 		console.log( data );
     );
-};
+};*/
 
-/*function callApiS( hLatitude, hLongitude ){
+function callApiS( hLatitude, hLongitude ){
  	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 		+"home_latitude="
 		+hLatitude
@@ -77,6 +77,7 @@ function callApi( hLatitude, hLongitude, wLatitude, wLongitude ){
     );
 };
 
+/*
 function callApiE( wLatitude, wLongitude ){
  	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 		+"home_latitude=0"
