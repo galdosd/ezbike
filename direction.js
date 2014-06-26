@@ -22,7 +22,7 @@ function callNav(){
 		where.text( "The latitude is "
 		 + latitude
 		 + " and the longitude is " + longitude + " good luck");
-		callApi( latitude, longitude );
+		callApiS( latitude, longitude );
 	}); 
 };
 
@@ -32,7 +32,7 @@ inputS.click( inputStart );
 function inputStart(){
 	var latitude = $( "#startLat" );
 	var longitude =$( "#startLong" );
-	callApi( latitude, longitude );
+	callApiS( latitude, longitude );
 };
 
 var inputE = $( "#eFind" );
@@ -40,17 +40,28 @@ inputE.click( inputE );
 
 function inputEnd(){
 	var latitude = $( "#endLat" );
-	var longitude =$( "#Long" );
-	callApi( latitude, longitude ); 
+	var longitude =$( "#endLong" );
+	callApiE( latitude, longitude ); 
 
 }
 
-function callApi( hLatitude, hLongitude ){
+function callApiS( hLatitude, hLongitude ){
  	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 		+"home_latitude="
 		+hLatitude
 		+"&home_longitude="
 		+hLongitude
+		+"&work_latitude=55.714"
+		+"&work_longitude=-65.989", answer
+    );
+};
+
+function callApiE( wLatitude, wLongitude ){
+ 	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
+		+"home_latitude="
+		+wLatitude
+		+"&home_longitude="
+		+wLongitude
 		+"&work_latitude=55.714"
 		+"&work_longitude=-65.989", answer
     );
