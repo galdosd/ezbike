@@ -26,13 +26,31 @@ function callNav(){
 	}); 
 };
 
-var find = $( "find" );
-find.click( inputStart );
+var homeUse = $( "#find" );
+homeUse.click( inputStart );
 
 function inputStart(){
 	var latitude = $( "#startLat" );
 	var longitude =$( "#startLong" );
 	callApi( latitude, longitude );
+	console.log( longitude );
+};
+
+function fCallApi( fLatitude, fLongitude ){
+ 	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
+		+"home_latitude="
+		+fLatitude
+		+"&home_longitude="
+		+fLongitude
+		+"&work_latitude=55.714"
+		+"&work_longitude=-65.989", answer
+    );
+};
+
+function fAnswer( data ) {
+    put_data_into_start( data, 0 );
+    put_data_into_start( data, 1 );
+    put_data_into_start( data, 2 );
 };
 
 function callApi( hLatitude, hLongitude ){
