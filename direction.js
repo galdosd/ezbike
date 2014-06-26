@@ -22,20 +22,28 @@ function callNav(){
 		where.text( "The latitude is "
 		 + latitude
 		 + " and the longitude is " + longitude + " good luck");
-		callApi( latitude, longitude );
+		callApiS( latitude, longitude );
 	}); 
 };
 
-var inputH = $( "#find" );
-inputH.click( inputStart );
+var inputS = $( "#sFind" );
+inputS.click( inputStart );
 
 function inputStart(){
 	var latitude = $( "#startLat" );
 	var longitude =$( "#startLong" );
-	callApi( latitude, longitude );
+	callApiS( latitude, longitude );
 };
 
-function callApi( hLatitude, hLongitude ){
+var inputE = $( "#eFind" );
+function inputEnd(){
+	var latitude = $( "#endLat" );
+	var longitude =$( "#Long" );
+	callApiE( latitude, longitude ); 
+
+}
+
+function callApiS( hLatitude, hLongitude ){
  	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 		+"home_latitude="
 		+hLatitude
@@ -46,15 +54,35 @@ function callApi( hLatitude, hLongitude ){
     );
 };
 
-function answer( data ) {
-    put_data_into_start( data, 0 );
-    put_data_into_start( data, 1 );
-    put_data_into_start( data, 2 );
+function callApiE( wLatitude, wLongitude ){
+ 	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
+		+"home_latitude="
+		+wLatitude
+		+"&home_longitude="
+		+wLongitude
+		+"&work_latitude=55.714"
+		+"&work_longitude=-65.989", answer
+    );
 };
 
-function put_data_into_start( data, number ) {
+function answer( data ) {
+    put_data_into( data, 0 );
+    put_data_into( data, 1 );
+    put_data_into( data, 2 );
+};
+
+function put_data_into( data, number ) {
 	var start = $( '#start' + number );
+	var end = $( "#end" + number);
 	start.text(
+		 data.begin_at[ number ].slots
+		 + " bikes at "
+		 + data.begin_at[ number ].name  
+		 + ", " 
+		 + data.begin_at[ number ].blocks  
+		 + " blocks away"
+	);
+	end.text(
 		 data.begin_at[ number ].slots
 		 + " bikes at "
 		 + data.begin_at[ number ].name  
