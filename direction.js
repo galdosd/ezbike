@@ -26,8 +26,8 @@ function callNav(){
 	}); 
 };
 
-var homeUse = $( "#find" );
-homeUse.click( inputStart );
+var inputH = $( "#find" );
+inputH.click( inputStart );
 
 function inputStart(){
 	var latitude = $( "#startLat" );
