@@ -94,11 +94,11 @@ function put_data_into_start( data, number ) {
 function put_data_into_end( data, number ) {
 	var start = $( "#start" + number );
 	start.text(
-		 data.end_at[ number ].slots
+		 data.finish_at[ number ].slots
 		 + " bikes at "
-		 + data.end_at[ number ].name  
+		 + data.finish_at[ number ].name  
 		 + ", " 
-		 + data.end_at[ number ].blocks  
+		 + data.finish_at[ number ].blocks  
 		 + " blocks away"
 	);
 };
