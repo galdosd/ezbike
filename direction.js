@@ -58,30 +58,30 @@ function callApiS( hLatitude, hLongitude ){
 
 function callApiE( wLatitude, wLongitude ){
  	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
-		+"home_latitude="
+		+"home_latitude=55"
+		+"&home_longitude=66"
+		+"&work_latitude="
 		+wLatitude
-		+"&home_longitude="
-		+wLongitude
-		+"&work_latitude=55.714"
-		+"&work_longitude=-65.989", answerE
+		+"&work_longitude="
+		+wLongitude, answerE
     );
 };
 
 function answer( data ) {
-    put_data_into( data, "start", 0 );
-    put_data_into( data, "start", 1 );
-    put_data_into( data, "start", 2 );
+    put_data_into_start( data, 0 );
+    put_data_into_start( data, 1 );
+    put_data_into_start( data, 2 );
 };
 
 function answerE( data ) {
-    put_data_into( data, "end", 0 );
-    put_data_into( data, "end", 1 );
-    put_data_into( data, "end", 2 );
+    put_data_into_end( data, 0 );
+    put_data_into_end( data, 1 );
+    put_data_into_end( data, 2 );
 };
 
-function put_data_into( data, sORe, number ) {
-	var thePoint = $( "#" + sORe + number );
-	thePoint.text(
+function put_data_into_start( data, number ) {
+	var start = $( "#start" + number );
+	start.text(
 		 data.begin_at[ number ].slots
 		 + " bikes at "
 		 + data.begin_at[ number ].name  
@@ -90,6 +90,19 @@ function put_data_into( data, sORe, number ) {
 		 + " blocks away"
 	);
 };
+
+function put_data_into_end( data, number ) {
+	var start = $( "#start" + number );
+	start.text(
+		 data.end_at[ number ].slots
+		 + " bikes at "
+		 + data.end_at[ number ].name  
+		 + ", " 
+		 + data.end_at[ number ].blocks  
+		 + " blocks away"
+	);
+};
+
 
 /*Go.click(function GO(){
 	callNav();
