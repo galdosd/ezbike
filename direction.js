@@ -26,6 +26,14 @@ function callNav(){
 	}); 
 };
 
+var find = $( "find" );
+find.click( inputStart );
+
+function inputStart(){
+	var latitude = $( "#startLat" );
+	var longitude =$( "#startLong" );
+	callApi( latitude, longitude );
+};
 
 function callApi( hLatitude, hLongitude ){
  	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
