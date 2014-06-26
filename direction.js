@@ -23,7 +23,7 @@ function callNav(){
 	}); 
 };
 
-var inputS = $( "#sFind" );
+/*var inputS = $( "#sFind" );
 inputS.click( inputStart );
 
 function inputStart(){
@@ -39,7 +39,7 @@ function inputEnd(){
 	var latitude = $( "#endLat" );
 	var longitude =$( "#endLong" );
 	callApiE( latitude, longitude ); 
-}
+}*/
 
 var how = $( "#all" );
 how.click( How );
