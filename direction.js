@@ -30,8 +30,8 @@ var inputS = $( "#sFind" );
 inputS.click( inputStart );
 
 function inputStart(){
-	var latitude = $( "#startLat" );
-	var longitude =$( "#startLong" );
+	var latitude = $( "#startLat" ).text().trim();
+	var longitude =$( "#startLong" ).text().trim();
 	callApi( latitude, longitude );
 };
 
