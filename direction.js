@@ -19,9 +19,6 @@ function callNav(){
 	navigator.geolocation.getCurrentPosition(function( position ) {
 		var latitude = position.coords.latitude;
 		var longitude = position.coords.longitude;
-		where.text( "The latitude is "
-		 + latitude
-		 + " and the longitude is " + longitude + " good luck");
 		callApiS( latitude, longitude );
 	}); 
 };
@@ -36,7 +33,7 @@ function inputStart(){
 };
 
 var inputE = $( "#eFind" );
-inputE.click( inputE );
+inputE.click( inputEnd );
 
 function inputEnd(){
 	var latitude = $( "#endLat" );

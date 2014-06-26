@@ -8,38 +8,42 @@
 <body>
 	
 	<div id="go" >Use your location</div>
-	<form>
-	  	Address:    <input name="formatted_address" type="text" value="">
-	</form>
+	
+	<div>
+		<form>
+		  	Address:    <input name="formatted_address" type="text" value="">
+		</form>
 
-	<div id ="sFind">Start</div>
+		<div id ="sFind">Start</div>
 
-	<div id="where">Put stuff here</div>
+		<div class="hide">
+			<div class="details" id="startLat">
+		  		     <span data-geo="lat" />
+		  	</div>
 
-	<div class="hide">
-		<div class="details" id="startLat">
-	  		     <span data-geo="lat" />
-	  	</div>
-
-	  	<div class="details" id="startLong">
-	  		    <span data-geo="lng" />
-	  	</div>
+		  	<div class="details" id="startLong">
+		  		    <span data-geo="lng" />
+		  	</div>
+		</div>
 	</div>
 
-	<form>
-	  	Address:    <input name="formatted_address" type="text" value="">
-	</form>
 
-	<div id ="endF">End</div>
+	<div>
+		<form>
+		  	Address:    <input name="formatted_address" type="text" value="">
+		</form>
 
-	<div class="hide">
-		<div class="details" id="endLat">
-	  		     <span data-geo="lat" />
-	  	</div>
+		<div id ="eFind">End</div>
 
-	  	<div class="details" id="endLong">
-	  		    <span data-geo="lng" />
-	  	</div>
+		<div class="hide">
+			<div class="details" id="endLat">
+		  		     <span data-geo="lat" />
+		  	</div>
+
+		  	<div class="details" id="endLong">
+		  		    <span data-geo="lng" />
+		  	</div>
+		</div>
 	</div>
 
 		<div id="start0">start</div>
