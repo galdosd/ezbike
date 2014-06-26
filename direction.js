@@ -80,8 +80,8 @@ function answerE( data ) {
 };
 
 function put_data_into( data, sORe, number ) {
-	var start = $( "#" + sORe + number );
-	start.text(
+	var thePoint = $( "#" + sORe + number );
+	thePoint.text(
 		 data.begin_at[ number ].slots
 		 + " bikes at "
 		 + data.begin_at[ number ].name  
