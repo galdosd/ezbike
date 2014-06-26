@@ -61,7 +61,8 @@ function callApi( hLatitude, hLongitude, wLatitude, wLongitude ){
 		+"&work_latitude="
 		+wLatitude
 		+"&work_longitude="
-		+wLongitude, answer
+		+wLongitude, answer,
+		console.log( data );
     );
 };
 
