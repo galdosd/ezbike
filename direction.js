@@ -39,10 +39,33 @@ function inputEnd(){
 	var latitude = $( "#endLat" );
 	var longitude =$( "#endLong" );
 	callApiE( latitude, longitude ); 
-
 }
 
-function callApiS( hLatitude, hLongitude ){
+var how = $( "#all" );
+how.click( How );
+
+function How(){
+	var hlatitude = $( "#startLat" );
+	var hlongitude =$( "#startLong" );
+	var wlatitude = $( "#endLat" );
+	var wlongitude =$( "#endLong" );
+	callApi(  hLatitude, hLongitude, wLatitude, wLongitude );
+};
+
+function callApi( hLatitude, hLongitude, wLatitude, wLongitude ){
+ 	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
+		+"home_latitude="
+		+hLatitude
+		+"&home_longitude="
+		+hLongitude
+		+"&work_latitude="
+		+wLatitude
+		+"&work_longitude="
+		+wLongitude, answer
+    );
+};
+
+/*function callApiS( hLatitude, hLongitude ){
  	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 		+"home_latitude="
 		+hLatitude
@@ -62,19 +85,22 @@ function callApiE( wLatitude, wLongitude ){
 		+"&work_longitude="
 		+wLongitude, answerE
     );
-};
+};*/
 
 function answer( data ) {
     put_data_into_start( data, 0 );
     put_data_into_start( data, 1 );
     put_data_into_start( data, 2 );
-};
-
-function answerE( data ) {
     put_data_into_end( data, 0 );
     put_data_into_end( data, 1 );
     put_data_into_end( data, 2 );
 };
+
+/*function answerE( data ) {
+    put_data_into_end( data, 0 );
+    put_data_into_end( data, 1 );
+    put_data_into_end( data, 2 );
+};*/
 
 function put_data_into_start( data, number ) {
 	var start = $( "#start" + number );
