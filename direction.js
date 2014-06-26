@@ -48,15 +48,15 @@ function callApiS( hLatitude, hLongitude ){
 		+hLatitude
 		+"&home_longitude="
 		+hLongitude
-		+"&work_latitude=55.714"
-		+"&work_longitude=-65.989", answer
+		+"&work_latitude=0"
+		+"&work_longitude=0", answer
     );
 };
 
 function callApiE( wLatitude, wLongitude ){
  	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
-		+"home_latitude=55"
-		+"&home_longitude=66"
+		+"home_latitude=0"
+		+"&home_longitude=0"
 		+"&work_latitude="
 		+wLatitude
 		+"&work_longitude="
