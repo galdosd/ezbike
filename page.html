@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>online example</title>
+     <link rel='stylesheet' href='styles/main.css'>
+</head>
+<body>		
+
+
+		<form>
+		  	Address:    <input name="formatted_address" type="text" value="">
+		</form>
+
+		<div id ="eFind">End</div>
+
+		<div class="hide">
+			<div class="details" id="endLat">
+		  		     <span data-geo="lat" />
+		  	</div>
+
+		  	<div class="details" id="endLong">
+		  		    <span data-geo="lng" />
+		  	</div>
+		</div>
+
+ <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+ <script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+ <script src="javascript/jquery.geocomplete.js"></script>
+<script src='direction.js'></script>
+</body>
+</html>
