@@ -89,8 +89,8 @@ function put_data_into_start( data, number ) {
 };
 
 function put_data_into_end( data, number ) {
-	var start = $( "#start" + number );
-	start.text(
+	var end = $( "#end" + number );
+	end.text(
 		 data.finish_at[ number ].slots
 		 + " bikes at "
 		 + data.finish_at[ number ].name  
