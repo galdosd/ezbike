@@ -19,7 +19,10 @@ function callNav(){
 	navigator.geolocation.getCurrentPosition(function( position ) {
 		var latitude = position.coords.latitude;
 		var longitude = position.coords.longitude;
-		callApiS( latitude, longitude );
+		where.text( "The latitude is "
+		 + latitude
+		 + " and the longitude is " + longitude + " good luck");
+		callApi( latitude, longitude );
 	}); 
 };
 
@@ -29,7 +32,7 @@ inputS.click( inputStart );
 function inputStart(){
 	var latitude = $( "#startLat" );
 	var longitude =$( "#startLong" );
-	callApiS( latitude, longitude );
+	callApi( latitude, longitude );
 };
 
 /*var inputE = $( "#eFind" );
@@ -66,16 +69,17 @@ function callApi( hLatitude, hLongitude, wLatitude, wLongitude ){
     );
 };*/
 
-function callApiS( hLatitude, hLongitude ){
+function callApi( hLatitude, hLongitude ){
  	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 		+"home_latitude="
 		+hLatitude
 		+"&home_longitude="
 		+hLongitude
-		+"&work_latitude=0"
-		+"&work_longitude=0", answer
+		+"&work_latitude=55.714"
+		+"&work_longitude=-65.989", answer
     );
 };
+
 
 /*
 function callApiE( wLatitude, wLongitude ){
@@ -93,9 +97,6 @@ function answer( data ) {
     put_data_into_start( data, 0 );
     put_data_into_start( data, 1 );
     put_data_into_start( data, 2 );
-    put_data_into_end( data, 0 );
-    put_data_into_end( data, 1 );
-    put_data_into_end( data, 2 );
 };
 
 /*function answerE( data ) {
@@ -105,7 +106,7 @@ function answer( data ) {
 };*/
 
 function put_data_into_start( data, number ) {
-	var start = $( "#start" + number );
+	var start = $( '#start' + number );
 	start.text(
 		 data.begin_at[ number ].slots
 		 + " bikes at "
