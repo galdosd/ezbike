@@ -41,7 +41,7 @@ inputE.click( inputEnd );
 function inputEnd(){
 	var latitude = $( "#endLat" ).text().trim();
 	var longitude =$( "#endLong" ).text().trim();
-	callApiE( latitude, longitude ); 
+	window.parent.callApiE( latitude, longitude ); 
 }
 
 var how = $( "#all" );
