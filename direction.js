@@ -118,7 +118,7 @@ function put_data_into_start( data, number ) {
 };
 
 function put_data_into_end( data, number ) {
-	var end = window.child.$( "#end" + number );
+	var end = $( "#end" + number );
 	end.text(
 		 data.finish_at[ number ].slots
 		 + " bikes at "
