@@ -121,7 +121,7 @@ function put_data_into_end( data, number ) {
 	var end = $( "#end" + number );
 	end.text(
 		 data.finish_at[ number ].slots
-		 + " bikes at "
+		 + " docks at "
 		 + data.finish_at[ number ].name  
 		 + ", " 
 		 + data.finish_at[ number ].blocks  
