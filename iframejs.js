@@ -1,6 +1,3 @@
-/*function output( number ) {
-
-};*/
 
 
 $("input").geocomplete({
@@ -58,7 +55,7 @@ function put_data_into_end( data, number ) {
 		 + " docks at "
 		 + data.finish_at[ number ].name  
 		 + ", " 
-		 + data.finish_at[ number ].blocks  
+		 + data.finish_at[ number ].blocks.math.round()  
 		 + " blocks away"
 	);
 };
