@@ -44,17 +44,6 @@ function inputEnd(){
 	window.parent.callApiE( latitude, longitude ); 
 }
 
-var how = $( "#all" );
-how.click( How );
-
-function How(){
-	var hLatitude = $( "#startLat" );
-	var hLongitude =$( "#startLong" );
-	var wLatitude = $( "#endLat" );
-	var wLongitude =$( "#endLong" );
-	callApi(  hLatitude, hLongitude, wLatitude, wLongitude );
-};
-
 /*function callApi( hLatitude, hLongitude, wLatitude, wLongitude ){
  	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 		+"home_latitude="
@@ -128,6 +117,10 @@ function put_data_into_end( data, number ) {
 		 + " blocks away"
 	);
 };
+
+ var iframe = window.getElementsByTagName( "iframe" )[ 0 ];
+  alert( "Frame title: " + iframe.contentWindow.title );
+
 
 
 /*Go.click(function GO(){
