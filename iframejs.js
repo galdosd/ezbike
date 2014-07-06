@@ -55,7 +55,7 @@ function put_data_into_end( data, number ) {
 		 + " docks at "
 		 + data.finish_at[ number ].name  
 		 + ", " 
-		 + data.finish_at[ number ].blocks.math.round()  
+		 + data.finish_at[ number ].Math.round(blocks)  
 		 + " blocks away"
 	);
 };
