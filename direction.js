@@ -35,7 +35,7 @@ function inputStart(){
 	callApi( latitude, longitude );
 };
 
-var inputE = $( "#frame" ).contentWindow.$( "#eFind" );
+var inputE = $( "#eFind" );
 inputE.click( inputEnd );
 
 function inputEnd(){
@@ -117,7 +117,6 @@ function put_data_into_end( data, number ) {
 		 + " blocks away"
 	);
 };
-
 
 
 
