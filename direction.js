@@ -35,7 +35,7 @@ function inputStart(){
 	callApi( latitude, longitude );
 };
 
-var inputE = iframe.contentWindow.$( "#eFind" );
+var inputE = $( "#frame" ).contentWindow.$( "#eFind" );
 inputE.click( inputEnd );
 
 function inputEnd(){
