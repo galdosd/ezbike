@@ -118,9 +118,7 @@ function put_data_into_end( data, number ) {
 	);
 };
 
- var iframe = window.getElementsByTagName( "iframe" )[ 0 ];
-  alert( "Frame title: " + iframe.contentWindow.title );
-
+ 
 
 
 /*Go.click(function GO(){
