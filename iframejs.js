@@ -46,6 +46,7 @@ function callApiE( wLatitude, wLongitude ){
     );
 };
 
+
 function answerE( data ) {
     put_data_into_end( data, 0 );
     put_data_into_end( data, 1 );
