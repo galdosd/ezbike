@@ -106,8 +106,9 @@ function put_data_into_start( data, number ) {
 	);
 };
 
-function put_data_into_end( data, number ) {
-	var end = $( "#end" + number );
+window.put_data_into_end = function ( data, number ) {
+	console.log("is there something wrong with the earth's gravitational pull in 1985?");
+		var end = $( "#end" + number );
 	end.text(
 		 data.finish_at[ number ].slots
 		 + " docks at "
@@ -116,11 +117,9 @@ function put_data_into_end( data, number ) {
 		 + data.finish_at[ number ].blocks  
 		 + " blocks away"
 	);
+
 };
 
-window.backToTheFuture = function() {
-	console.log("is there something wrong with the earth's gravitational pull in 1985?")
-}
 
 
 /*Go.click(function GO(){

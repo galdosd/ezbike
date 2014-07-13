@@ -52,15 +52,7 @@ function answerE( data ) {
     put_data_into_end( data, 2 );
 };
 
+
 function put_data_into_end( data, number ) {
-	window.parent.backToTheFuture();
-	var end = $( "#end" + number );
-	end.text(
-		 data.finish_at[ number ].slots
-		 + " docks at "
-		 + data.finish_at[ number ].name  
-		 + ", " 
-		 + data.finish_at[ number ].blocks
-		 	 + " blocks away"
-	);
+	window.parent.put_data_into_end( data, number );
 };
