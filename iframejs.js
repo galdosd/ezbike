@@ -32,7 +32,7 @@ function inputEnd(){
 	window.parent.backToTheFuture();
 	var latitude = $( "#endLat" ).text().trim();
 	var longitude = $( "#endLong" ).text().trim();
-	// callApiE( latitude, longitude ); 
+	callApiE( latitude, longitude ); 
 };
 
 
@@ -60,7 +60,7 @@ function put_data_into_end( data, number ) {
 		 + " docks at "
 		 + data.finish_at[ number ].name  
 		 + ", " 
-		 + data.finish_at[ number ].blocks qa 
-		 + " blocks away"
+		 + data.finish_at[ number ].blocks
+		 	 + " blocks away"
 	);
 };
