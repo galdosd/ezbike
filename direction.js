@@ -41,7 +41,7 @@ inputE.click( inputEnd );
 function inputEnd(){
 	var latitude = $( "#endLat" ).text().trim();
 	var longitude =$( "#endLong" ).text().trim();
-	window.parent.callApiE( latitude, longitude ); 
+	callApiE( latitude, longitude ); 
 }
 
 /*function callApi( hLatitude, hLongitude, wLatitude, wLongitude ){
@@ -118,6 +118,9 @@ function put_data_into_end( data, number ) {
 	);
 };
 
+window.backToTheFuture = function() {
+	console.log("is there something wrong with the earth's gravitational pull in 1985?")
+}
 
 
 /*Go.click(function GO(){

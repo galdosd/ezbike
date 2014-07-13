@@ -28,9 +28,11 @@ var inputE = $( "#eFind" );
 inputE.click( inputEnd );
 
 function inputEnd(){
+	console.log("running inputEnd");
+	window.parent.backToTheFuture();
 	var latitude = $( "#endLat" ).text().trim();
 	var longitude = $( "#endLong" ).text().trim();
-	callApiE( latitude, longitude ); 
+	// callApiE( latitude, longitude ); 
 };
 
 
@@ -58,7 +60,7 @@ function put_data_into_end( data, number ) {
 		 + " docks at "
 		 + data.finish_at[ number ].name  
 		 + ", " 
-		 + data.finish_at[ number ].blocks  
+		 + data.finish_at[ number ].blocks qa 
 		 + " blocks away"
 	);
 };
