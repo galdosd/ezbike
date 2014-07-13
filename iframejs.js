@@ -29,7 +29,6 @@ inputE.click( inputEnd );
 
 function inputEnd(){
 	console.log("running inputEnd");
-	window.parent.backToTheFuture();
 	var latitude = $( "#endLat" ).text().trim();
 	var longitude = $( "#endLong" ).text().trim();
 	callApiE( latitude, longitude ); 
@@ -54,6 +53,7 @@ function answerE( data ) {
 };
 
 function put_data_into_end( data, number ) {
+	window.parent.backToTheFuture();
 	var end = $( "#end" + number );
 	end.text(
 		 data.finish_at[ number ].slots
