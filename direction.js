@@ -107,7 +107,6 @@ function put_data_into_start( data, number ) {
 };
 
 window.put_data_into_end = function ( data, number ) {
-	console.log("is there something wrong with the earth's gravitational pull in 1985?");
 		var end = $( "#end" + number );
 	end.text(
 		 data.finish_at[ number ].slots

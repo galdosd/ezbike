@@ -28,7 +28,6 @@ var inputE = $( "#eFind" );
 inputE.click( inputEnd );
 
 function inputEnd(){
-	console.log("running inputEnd");
 	var latitude = $( "#endLat" ).text().trim();
 	var longitude = $( "#endLong" ).text().trim();
 	callApiE( latitude, longitude ); 
