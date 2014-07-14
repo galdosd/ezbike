@@ -14,7 +14,7 @@ iframe {
 #resultArea {
 	padding:						10px;
 	font-size: 					110%;
-	width:						80%;
+	width:						100%;
 }
 .hide {
 	display:					none;
@@ -51,7 +51,7 @@ iframe {
 	}
 
 .bikeInput {
-	width:						40%;
+	width:						35%;
 	margin:						auto;
 }
 
