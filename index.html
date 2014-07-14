@@ -7,30 +7,41 @@
      <link rel='stylesheet' href='styles/main.css'>
 </head>
 <body>
-	
-	<button class="btn btn-primary btn-lg btn-block" id="go" >Use your location</button>
 
-	<div>
-		<form>
-		  	<input name="formatted_address" type="text" value="" placeholder="start">
-		</form>
+	<div class="title"><h1>EZBIKE</h1>
+    	<p>The easiest way to get from a to b on a citibike</p>
+    </div>
 
-		<div id ="sFind">GO</div>
+    <form class="ezbikeInput">
+		<fieldset>
 
-		<div class="hide">
-			<div class="details">
-		  		     <span data-geo="lat" id="startLat" />
-		  	</div>
+			<div class="form-group">
+				<button class="btn btn-primary btn-lg btn-block" id="go">Use your location</button>
+			</div>
 
-		  	<div class="details">
-		  		    <span data-geo="lng" id="startLong" />
-		  	</div>
-		</div>
+			<div class="bikeInput">
+				<div class="form-group">
+					<input class="form-control" id="start" name="formatted_address" type="text" value="" placeholder="start">
+					<div id ="sFind">GO</div>
+				</div>	
+			</div>
+
+			<iframe src="page.html" id="frame" seamless width="500" height="50" frameBorder="0" hspace="0" vspace="0" marginHeight = "0" marginWidth = "0" scrolling= "no" allowtransparency="true">
+			</iframe> 
+			
+
+		</fieldset>
+	</form>
+
+	<div class="hide">
+		<div class="details">
+		  		<span data-geo="lat" id="startLat" />
+		  </div>
+
+		  <div class="details">
+		  		<span data-geo="lng" id="startLong" />
+		 </div>
 	</div>
-
-	<iframe src="page.html" id="frame" seamless width="500" height="50" frameBorder="0" hspace="0" vspace="0" marginHeight = "0" marginWidth = "0" scrolling= "no" allowtransparency="true">
-		<!--From the inside of a frame, a script can get a reference to the parent window via window.parent.-->
-	</iframe>
 
 	<div id="start0">start</div>
 	<div id="start1">start</div>
