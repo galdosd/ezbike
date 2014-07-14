@@ -3,13 +3,12 @@
 <head>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>online example</title>
+      <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
      <link rel='stylesheet' href='styles/main.css'>
 </head>
 <body>
 	
-	<div id="go" >Use your location</div>
-	<div id="where">where</div>
-	
+	<button class="btn btn-primary btn-lg btn-block" id="go" >Use your location</button>
 	<div>
 		<form>
 		  	start:    <input name="formatted_address" type="text" value="">
@@ -64,6 +63,7 @@
 	3 use lat and long in api
 	4 stick it in the div
 -->
+<script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
  <script src="javascript/jquery.geocomplete.js"></script>
