@@ -15,9 +15,9 @@ var work = $( "#work" );
 
 Go.click( callNav );
 
-function callNav(){
+function callNav( e ){
 	e.preventDefault();
-	
+
 	navigator.geolocation.getCurrentPosition(function( position ) {
 		var latitude = position.coords.latitude;
 		var longitude = position.coords.longitude;
