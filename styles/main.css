@@ -14,6 +14,7 @@ iframe {
 #resultArea {
 	padding:						10px;
 	font-size: 					110%;
+	width:						80%;
 }
 .hide {
 	display:					none;
