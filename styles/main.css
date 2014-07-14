@@ -7,9 +7,8 @@ body {
 
 iframe {
 	width:						100%;
-	height:						100%;" frameBorder="0" hspace="0" vspace="0" marginHeight = "0" marginWidth = "0" scrolling= "no" allowtransparency="true"
+	height:						100%; 
 }
-
 .hide {
 	display:					none;
 }
