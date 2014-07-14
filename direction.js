@@ -114,7 +114,7 @@ window.put_data_into_end = function ( data, number ) {
 		 + " docks at "
 		 + data.finish_at[ number ].name  
 		 + ", " 
-		 + data.finish_at[ number ].blocks  
+		 + data.finish_at[ number.trim() ].blocks  
 		 + " blocks away"
 	);
 
