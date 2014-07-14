@@ -101,7 +101,7 @@ function put_data_into_start( data, number ) {
 		 + " bikes at "
 		 + data.begin_at[ number ].name  
 		 + ", " 
-		 + Math.round( data.begin_at[ number ].blocks );  
+		 + Math.round( data.begin_at[ number ].blocks )  
 		 + " blocks away"
 	);
 };
@@ -113,7 +113,7 @@ window.put_data_into_end = function ( data, number ) {
 		 + " docks at "
 		 + data.finish_at[ number ].name  
 		 + ", " 
-		 + Math.round( data.finish_at[ number ].blocks );  
+		 + Math.round( data.finish_at[ number ].blocks )  
 		 + " blocks away"
 	);
 
