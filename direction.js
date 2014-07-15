@@ -35,16 +35,16 @@ function callNav( e ){
 var inputS = $( "#sFind" );
 inputS.click( inputStart );
 
-function inputStart(){
+function inputStart( e ){
 
 	var latitude = $( "#startLat" ).text().trim();
 	var longitude =$( "#startLong" ).text().trim();
 
-	if ( start == "" || start == " " ) {
+	/*if ( start == "" || start == " " ) {
 		alert( "please enter an address" );
 	}
 
-	else { callApi( latitude, longitude );
+	else*/ { callApi( latitude, longitude );
 	}
 };
 
