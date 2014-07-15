@@ -38,7 +38,7 @@ inputS.click( inputStart );
 function inputStart( e ){
 
 	if ( start == "" || start == " " ) {
-		alert( "please enter an address" );
+		start.append( "what" );
 		console.log( "what" );
 		e.stopPopogation();
 		return;
