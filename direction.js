@@ -41,6 +41,7 @@ function inputStart( e ){
 		alert( "please enter an address" );
 		console.log( "what" );
 		e.stopPopogation();
+		return;
 	}
 
 	else { 
