@@ -123,7 +123,7 @@ function put_data_into_start( data, number ) {
 };
 
 window.put_data_into_end = function ( data, number ) {
-		var end = $( "#end" + number );
+	var end = $( "#end" + number );
 	end.text(
 		 data.finish_at[ number ].slots
 		 + " docks at "
