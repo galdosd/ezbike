@@ -15,6 +15,10 @@ var work = $( "#work" );
 
 Go.click( callNav );
 
+var start = $( "#start" ).val();
+
+
+
 function callNav( e ){
 	e.preventDefault();
 
@@ -32,8 +36,14 @@ var inputS = $( "#sFind" );
 inputS.click( inputStart );
 
 function inputStart(){
+
 	var latitude = $( "#startLat" ).text().trim();
 	var longitude =$( "#startLong" ).text().trim();
+
+	if ( start == "" || start == " " ) {
+		start.text( "please enter an address" );
+	};
+	
 	callApi( latitude, longitude );
 };
 
