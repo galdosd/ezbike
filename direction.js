@@ -39,6 +39,7 @@ function inputStart( e ){
 
 	if ( start == "" || start == " " ) {
 		alert( "please enter an address" );
+		console.log( "what" );
 	}
 
 	else { 
