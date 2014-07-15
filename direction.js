@@ -41,7 +41,7 @@ function inputStart(){
 	var longitude =$( "#startLong" ).text().trim();
 
 	if ( start == "" || start == " " ) {
-		start.text( "please enter an address" );
+		alert( "please enter an address" );
 	};
 	
 	callApi( latitude, longitude );
