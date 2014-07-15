@@ -42,9 +42,10 @@ function inputStart(){
 
 	if ( start == "" || start == " " ) {
 		alert( "please enter an address" );
-	};
+	}
 
-	else callApi( latitude, longitude );
+	else { callApi( latitude, longitude );
+	}
 };
 
 var inputE = $( "#eFind" );
