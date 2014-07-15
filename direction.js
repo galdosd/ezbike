@@ -37,14 +37,14 @@ inputS.click( inputStart );
 
 function inputStart( e ){
 
-	var latitude = $( "#startLat" ).text().trim();
-	var longitude =$( "#startLong" ).text().trim();
-
-	/*if ( start == "" || start == " " ) {
+	if ( start == "" || start == " " ) {
 		alert( "please enter an address" );
 	}
 
-	else*/ { callApi( latitude, longitude );
+	else { 
+		var latitude = $( "#startLat" ).text().trim();
+		var longitude =$( "#startLong" ).text().trim();	
+		callApi( latitude, longitude );
 	}
 };
 
