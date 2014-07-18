@@ -9,7 +9,7 @@ $("input").geocomplete({
 });
 
 $("#finish").geocomplete({
-  details: ".details",
+  details: ".details2",
   detailsAttribute: "data-geo"
 });
 
