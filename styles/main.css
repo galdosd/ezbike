@@ -6,6 +6,7 @@ body {
 }
 
 .words {
+	transition: 				display 0.5s ease;
 	display:					none;
 	background-color:			white;
 	margin-left:				40%;
