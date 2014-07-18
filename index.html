@@ -26,13 +26,24 @@
 				</div>	
 			</div>
 
-			<iframe src="page.html" id="frame" "seamless" frameBorder="0" hspace="0" vspace="0" marginHeight = "0" marginWidth = "0" scrolling= "no" allowtransparency="true">
-			</iframe> 
+			 <form class="ezbikeInput2">
+		<fieldset>	
+			<div class="bikeInput">
+				<div class="form-group">
+					<input class="form-control" id="finish" name="formatted_address" type="text" value="" placeholder="finish"></input>
+					<div id ="eFind">GO</div>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+
+			<!--<iframe src="page.html" id="frame" "seamless" frameBorder="0" hspace="0" vspace="0" marginHeight = "0" marginWidth = "0" scrolling= "no" allowtransparency="true">
+			</iframe>--> 
 			
 		</fieldset>
 	</form>
 
-	<div class="hide">
+	<!--<div class="hide">-->
 		<div class="details">
 		  		<span data-geo="lat" id="startLat" />
 		  </div>
@@ -40,7 +51,17 @@
 		  <div class="details">
 		  		<span data-geo="lng" id="startLong" />
 		 </div>
-	</div>
+
+		 <div class="details">
+		  		<span data-geo="lat" id="endLat" />
+		  </div>
+
+		  <div class="details">
+		  		<span data-geo="lng" id="endLong" />
+		 </div>
+
+
+	<!--</div>-->
 
 <div id="resultArea">
 	<div id="start0">hello</div>
