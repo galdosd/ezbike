@@ -77,7 +77,8 @@ body {
 	margin:						auto;
 	border-radius:				2px;
 	background-color:			rgba(194, 231, 195, 0.8);
-
+	padding:					10px;
+	font-size: 					110%;
 }
 
 @media (max-width: 1000px) {
