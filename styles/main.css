@@ -9,13 +9,14 @@ body {
 	display:					none;
 	background-color:			white;
 	margin:						50px;
+	position:					absolute;
+
+}
 
 }
 
 .show {
 	display:					block;
-	position:					absolute;
-	margin-top:					50px;
 }
 
 
