@@ -8,8 +8,7 @@ body {
 .words {
 	display:					none;
 	background-color:			white;
-	margin-left:				30%;
-	margin-right:				30%;
+	margin-left:				100px;
 	padding:					20px;
 	position:					absolute;
 
