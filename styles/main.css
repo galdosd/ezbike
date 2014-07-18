@@ -5,11 +5,11 @@ body {
 	background-repeat: 			no-repeat;
 }
 
-#words {
+.words {
 	display:					none;
 }
 
-#show {
+.show {
 	display:					block;
 }
 

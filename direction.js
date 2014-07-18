@@ -19,7 +19,7 @@ var about = $( "#about" );
 about.click( show );
 
 function show(){
-	$( "#words" ).addClass( "show");
+	$( ".words" ).addClass( "show");
 }
 
 
