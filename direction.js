@@ -3,7 +3,7 @@
 };*/
 
 
-$("input").geocomplete({
+$("#start").geocomplete({
   details: ".details",
   detailsAttribute: "data-geo"
 });
@@ -42,18 +42,18 @@ inputS.click( inputStart );
 
 function inputStart( e ){
 
-	if ( start == "" || start == " " ) {
+	/*if ( start == "" || start == " " ) {
 		alert( "please enter an address" );
 		console.log( "what" );
 		e.stopPopogation();
 		return;
-	}
+	}*/
 
-	else { 
+//	else { 
 		var latitude = $( "#startLat" ).text().trim();
 		var longitude =$( "#startLong" ).text().trim();	
 		callApi( latitude, longitude );
-	}
+//	}
 };
 
 var inputE = $( "#eFind" );
