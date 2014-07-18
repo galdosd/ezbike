@@ -127,7 +127,7 @@ function put_data_into_start( data, number ) {
 	);
 };
 
-window.put_data_into_end = function ( data, number ) {
+function put_data_into_end( data, number ) {
 	var end = $( "#end" + number );
 	end.text(
 		 data.finish_at[ number ].slots
@@ -139,6 +139,19 @@ window.put_data_into_end = function ( data, number ) {
 	);
 
 };
+
+/*window.put_data_into_end = function ( data, number ) {
+	var end = $( "#end" + number );
+	end.text(
+		 data.finish_at[ number ].slots
+		 + " docks at "
+		 + data.finish_at[ number ].name  
+		 + ", " 
+		 + Math.round( data.finish_at[ number ].blocks )  
+		 + " blocks away"
+	);
+
+};*/
 
 
 
