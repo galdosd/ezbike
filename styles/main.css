@@ -14,8 +14,9 @@ body {
 
 .show {
 	display:					block;
+	position:					absolute;
+	margin-top:					50px;
 }
-
 
 
 
