@@ -6,6 +6,7 @@ body {
 }
 
 #words {
+	display:					none;
 }
 
 #show {
