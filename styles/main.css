@@ -5,6 +5,16 @@ body {
 	background-repeat: 			no-repeat;
 }
 
+#words {
+	display:					none;
+}
+
+#show {
+	display:					block;
+}
+
+
+
 
 #frame {
 	width:						100%;
