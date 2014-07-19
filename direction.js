@@ -13,18 +13,15 @@ $("#finish").geocomplete({
   detailsAttribute: "data-geo"
 });
 
-
-var about = $( "#about" );
 var words = $( ".words" );
-var x = $( ".x" );
 
-about.click( show );
+$("#about").click( show );
 
 function show(){
 	words.addClass( "show");
 }
 
-x.click( hide );
+$( ".x" ).click( hide );
 
 function hide(){
 	words.removeClass( "show" );
@@ -37,10 +34,6 @@ var where = $( "#where" );
 var work = $( "#work" );
 
 Go.click( callNav );
-
-var start = $( "#start" ).val();
-
-
 
 function callNav( e ){
 	e.preventDefault();
@@ -57,6 +50,8 @@ function callNav( e ){
 
 var inputS = $( "#sFind" );
 inputS.click( inputStart );
+
+var start = $( "#start" ).val();
 
 function inputStart( e ){
 
