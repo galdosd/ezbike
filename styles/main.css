@@ -6,20 +6,21 @@ body {
 }
 
 .words {
-	-webkit-transition: background-color ease-in 1s;
-	/*-moz-transition: all ease-in 1s;
-    -o-transition: all ease-in 1s;
-    transition: all ease-in 1s;*/
 	display:					none;
-	background-color:			white;
-	margin-left:				40%;
-	padding:					20px;
-	position:					absolute;
+
 
 }
 
 .show {
+	-webkit-transition: background-color ease-in 1s;
+	/*-moz-transition: all ease-in 1s;
+    -o-transition: all ease-in 1s;
+    transition: all ease-in 1s;*/
 	display:					block;
+	background-color:			white;
+	margin-left:				40%;
+	padding:					20px;
+	position:					absolute;
 }
 
 
