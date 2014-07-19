@@ -81,8 +81,10 @@ body {
 	background-color:			rgba(194, 231, 195, 0.8);
 	padding:					10px;
 	font-size: 					110%;
-	padding:						10px;
+	padding:					10px;
 	font-size: 					110%;
+	display:					block;
+	overflow: 					auto;
 }
 
 @media (max-width: 1000px) {
