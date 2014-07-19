@@ -19,7 +19,6 @@ body {
 }
 
 .show {
-	-webkit-transition: display ease-in 1s;
 	display:					block;
 }
 
