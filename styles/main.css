@@ -18,10 +18,8 @@ body {
 
 }
 
-}
-
 .show {
-	-webkit-transition: all ease-in 1s;
+	-webkit-transition: display ease-in 1s;
 	display:					block;
 }
 
