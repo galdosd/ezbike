@@ -27,7 +27,7 @@ function show(){
 x.click( hide );
 
 function hide(){
-	words.removeClass( ".show" );
+	words.removeClass( "show" );
 }
 
 
