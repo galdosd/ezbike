@@ -53,7 +53,7 @@ inputS.click( inputStart );
 
 var start = $( "#start" ).val();
 
-start.keypress( inputStart );
+inputS.keypress( inputStart );
 
 function inputStart( e ){
 
