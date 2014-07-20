@@ -53,7 +53,11 @@ inputS.click( inputStart );
 
 var start = $( "#start" ).val();
 
-inputS.keypress( inputStart );
+$(document).keypress( inputStart (e) {
+    if(e.which == 13) {
+        alert('You pressed enter!');
+    }
+});
 
 function inputStart( e ){
 
