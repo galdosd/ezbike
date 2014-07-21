@@ -133,7 +133,7 @@ function put_data_into_start( data, number ) {
 	start.html(
 		"<span class='number'>"
 		 + data.begin_at[ number ].slots
-		 +"</span">
+		 +"</span>"
 		 + "<span class='docks'> bikes at </span>"
 		 + data.begin_at[ number ].name  
 		 + ", " 
