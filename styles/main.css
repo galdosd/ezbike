@@ -75,9 +75,8 @@ body {
 
 .number {
 	color:						blue;
-	width:						200px;
-	height:						25px;
 	background-color:			white;
+	margin:						10px;
 	border-radius:				50%;
 }
 
