@@ -132,7 +132,7 @@ function put_data_into_start( data, number ) {
 	var start = $( '#start' + number );
 	start.html(
 		"<span class='number'>"
-		 +data.begin_at[ number ].slots
+		 + data.begin_at[ number ].slots
 		 +"</span">
 		 + "<span class='docks'> bikes at </span>"
 		 + data.begin_at[ number ].name  
@@ -146,7 +146,7 @@ function put_data_into_end( data, number ) {
 	var end = $( "#end" + number );
 	end.html(
 		"<span class='number'>"
-		 +data.finish_at[ number ].slots
+		 + data.finish_at[ number ].slots
 		 +"</span>"
 		 + "<span class='docks'> docks at </span>"
 		 + data.finish_at[ number ].name  
@@ -154,7 +154,6 @@ function put_data_into_end( data, number ) {
 		 + Math.round( data.finish_at[ number ].blocks )  
 		 + " blocks away"
 	);
-
 };
 
 /*window.put_data_into_end = function ( data, number ) {
