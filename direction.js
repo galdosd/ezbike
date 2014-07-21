@@ -51,7 +51,7 @@ function callNav( e ){
 var inputS = $( "#sFind" );
 inputS.click( inputStart );
 
-var start = $( "#start" ).val();
+//var start = $( "#start" ).val();
 
 function inputStart( e ){
 
