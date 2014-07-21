@@ -130,9 +130,9 @@ function answerE( data ) {
 
 function put_data_into_start( data, number ) {
 	var start = $( '#start' + number );
-	start.text(
+	start.html(
 		 data.begin_at[ number ].slots
-		 + " bikes at "
+		 + "<div class='docks'> bikes at</div>"
 		 + data.begin_at[ number ].name  
 		 + ", " 
 		 + Math.round( data.begin_at[ number ].blocks )  
@@ -142,9 +142,9 @@ function put_data_into_start( data, number ) {
 
 function put_data_into_end( data, number ) {
 	var end = $( "#end" + number );
-	end.text(
+	end.html(
 		 data.finish_at[ number ].slots
-		 + " docks at "
+		 + "<div class='docks'> docks at</div>"
 		 + data.finish_at[ number ].name  
 		 + ", " 
 		 + Math.round( data.finish_at[ number ].blocks )  

@@ -73,6 +73,10 @@ body {
 	position:					relative;
 }
 
+.docks {
+	color:						blue;
+}
+
 #resultArea {
 	height:						150px;
 	width:						55%;
