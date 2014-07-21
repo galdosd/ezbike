@@ -73,10 +73,14 @@ body {
 	position:					relative;
 }
 
+.output {
+	padding:					5px;
+}
+
 .number {
 	color:						blue;
 	background-color:			white;
-	padding:						10px;
+	padding:					5px;
 	border-radius:				50%;
 }
 
