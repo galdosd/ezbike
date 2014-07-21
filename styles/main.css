@@ -73,9 +73,8 @@ body {
 	position:					relative;
 }
 
-.docks {
+.number {
 	color:						blue;
-	text-align: 				inline;
 }
 
 #resultArea {
