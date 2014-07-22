@@ -30,7 +30,7 @@ body {
 	height:						70px;			
 }
 
-.hide {
+.hide .sAt .eAt {
 	display:					none;
 }
 
@@ -79,7 +79,6 @@ body {
 
 .number {
 	color:						blue;
-	background-color:			white;
 }
 
 #resultArea {
