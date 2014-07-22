@@ -74,6 +74,9 @@ var inputE = $( "#eFind" );
 inputE.click( inputEnd );
 
 start.keypress( function (e){
+	if ( event.which == 13 ) {
+     event.preventDefault();
+  }
  console.log(e);
 });
 
@@ -123,7 +126,7 @@ function inputEnd(){
     });
 };*/
 
-function callApi( hlatitude, hlongitude ){
+function callApi( hLatitude, hLongitude ){
 	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 		+"home_latitude="
 		+hLatitude
