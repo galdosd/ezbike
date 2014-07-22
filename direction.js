@@ -97,7 +97,7 @@ function inputEnd(){
     );
 };*/
 
-function callApi( hLatitude, hLongitude ){
+/*function callApi( hLatitude, hLongitude ){
 	console.log('calling api');
  	$.ajax({ 
  		url: "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
@@ -106,10 +106,11 @@ function callApi( hLatitude, hLongitude ){
 		+"&home_longitude="
 		+hLongitude
 		+"&work_latitude=55.714"
-		+"&work_longitude=-65.989",
+		+"&work_longitude=-65.989"
+		+"&callback=?",
 		dataType: 'jsonp',
-		jsonpCallback: 'jsonCallback',
-		// contentType: "application/json",
+		//jsonpCallback: 'jsonCallback',
+		//contentType: "application/json",
 		success: function(data) {
 			console.log(data);
 			data = $.parseJSON(data);
@@ -117,11 +118,21 @@ function callApi( hLatitude, hLongitude ){
 			console.log( "answer" );
 		},
 		error: function(e){
-			console.log( "errror");
+			console.log(e.message);
 		}
     });
-};
+};*/
 
+function callApi( hlatitute, hlongitude ){
+	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
+		+"home_latitude="
+		+hLatitude
+		+"&home_longitude="
+		+hLongitude
+		+"&work_latitude=55.714"
+		+"&work_longitude=-65.989"), answer
+	);
+};
 
 
 function callApiE( wLatitude, wLongitude ){
