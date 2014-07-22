@@ -89,7 +89,7 @@ body {
 	background-color:			rgba(194, 231, 195, 0.8);
 	font-size: 					110%;
 	padding:					7px;
-	padding-left:				10%;
+	padding-left:				5%;
 	font-size: 					110%;
 	display:					block;
 	overflow: 					auto;
@@ -100,11 +100,16 @@ body {
 		width:					40%;
 	}
 
+	#resultArea {
+		width:					80%;
+		font-size:				80%;
+	}
+
 	body {
 	background-image:			url(../pics/background1.jpg);
 	background-size:			cover;
 	background-repeat: 			no-repeat;
-}
+	}
 }
 
 
