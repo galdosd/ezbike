@@ -1,6 +1,6 @@
-/*function output( number ) {
+function output( number ) {
 
-};*/
+}
 
 
 $("#start").geocomplete({
@@ -51,7 +51,7 @@ function callNav( e ){
 var inputS = $( "#sFind" );
 inputS.click( inputStart );
 
-var start = $( "#start" ).val();
+var start = $( "#start" ); 
 
 function inputStart( e ){
 
@@ -97,14 +97,27 @@ function inputEnd(){
 };*/
 
 function callApi( hLatitude, hLongitude ){
- 	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
+	console.log('calling api');
+ 	$.ajax({ 
+ 		url: "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 		+"home_latitude="
 		+hLatitude
 		+"&home_longitude="
 		+hLongitude
 		+"&work_latitude=55.714"
-		+"&work_longitude=-65.989", answer
-    );
+		+"&work_longitude=-65.989",
+		dataType: 'jsonp',
+		jsonpCallback: 'jsonCallback',
+		// contentType: "application/json",
+		success: function(data) {
+			console.log(data);
+			data = $.parseJSON(data);
+			answer(data);
+		},
+		complete: function(data) {
+			console.log(data)
+		}
+    });
 };
 
 
@@ -189,7 +202,5 @@ function put_data_into_end( data, number ) {
 //need to put that lat and long into API web address
 //goal to output start statation.... on click of another button
 
-
-
 /*button.click(function(){
-		where.text( latitude );*/
+		where.text( latitude ); */
