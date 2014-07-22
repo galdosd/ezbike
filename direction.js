@@ -17,23 +17,48 @@ var words = $( ".words" );
 
 $("#about").click( show );
 
-function show(){
+function showWords(){
 	words.addClass( "show");
 }
 
 $( ".x" ).click( hide );
 
-function hide(){
+function hideWords(){
 	words.removeClass( "show" );
 }
+
 
 
 //http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?home_latitude=5.5&home_longitude=0&work_latitude=40.714&work_longitude=-73.989
 var Go = $( "#go" );
 var where = $( "#where" );
 var work = $( "#work" );
+var start = $( "#start" );
+var finish = $( "#finish" );
+
+//
 
 Go.click( callNav );
+
+var inputS = $( "#sFind" );
+inputS.click( inputStart );
+
+start.keypress( function (e){
+	if(e.which == 13){
+		inputStart();
+	}
+});
+
+var inputE = $( "#eFind" );
+inputE.click( inputEnd );
+
+finish.keypress( function (e){
+	if(e.which == 13){
+		inputEnd();
+	}
+});
+
+//
 
 function callNav( e ){
 	e.preventDefault();
@@ -47,11 +72,6 @@ function callNav( e ){
 		callApi( latitude, longitude );
 	}); 
 };
-
-var inputS = $( "#sFind" );
-inputS.click( inputStart );
-
-var start = $( "#start" ); 
 
 function inputStart( e ){
 	console.log( "start working" );
@@ -70,35 +90,11 @@ function inputStart( e ){
 //	}
 };
 
-var inputE = $( "#eFind" );
-inputE.click( inputEnd );
-
-start.keypress( function (e){
-	if(event.which == 13){
-		inputEnd();
-	} 
- 	console.log(e);
-});
-
 function inputEnd(){
 	var latitude = $( "#endLat" ).text().trim();
 	var longitude =$( "#endLong" ).text().trim();
 	callApiE( latitude, longitude ); 
 };
-
-/*function callApi( hLatitude, hLongitude, wLatitude, wLongitude ){
- 	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
-		+"home_latitude="
-		+hLatitude
-		+"&home_longitude="
-		+hLongitude
-		+"&work_latitude="
-		+wLatitude
-		+"&work_longitude="
-		+wLongitude, answer,
-		console.log( data );
-    );
-};*/
 
 /*function callApi( hLatitude, hLongitude ){
 	console.log('calling api');
@@ -192,31 +188,3 @@ function put_data_into_end( data, number ) {
 		 +"</div>"
 	);
 };
-
-/*window.put_data_into_end = function ( data, number ) {
-	var end = $( "#end" + number );
-	end.text(
-		 data.finish_at[ number ].slots
-		 + " docks at "
-		 + data.finish_at[ number ].name  
-		 + ", " 
-		 + Math.round( data.finish_at[ number ].blocks )  
-		 + " blocks away"
-	);
-
-};*/
-
-
-
-/*Go.click(function GO(){
-	callNav();
-	callApi();
-	answer( data );
-});*/
-
-//already able to generate lat and long from location on click
-//need to put that lat and long into API web address
-//goal to output start statation.... on click of another button
-
-/*button.click(function(){
-		where.text( latitude ); */
