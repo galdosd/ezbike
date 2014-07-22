@@ -74,9 +74,7 @@ var inputE = $( "#eFind" );
 inputE.click( inputEnd );
 
 start.keypress( function (e){
-	if ( event.which == 13 ) {
-     event.preventDefault();
-  }
+	event.which == 13 
  console.log(e);
 });
 
