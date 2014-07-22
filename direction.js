@@ -54,6 +54,7 @@ inputS.click( inputStart );
 var start = $( "#start" ); 
 
 function inputStart( e ){
+	console.log( "start working" );
 
 	/*if ( start == "" || start == " " ) {
 		alert( "please enter an address" );
