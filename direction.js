@@ -17,13 +17,13 @@ var words = $( ".words" );
 
 $("#about").click( show );
 
-function showWords(){
+function show(){
 	words.addClass( "show");
 }
 
 $( ".x" ).click( hide );
 
-function hideWords(){
+function hide(){
 	words.removeClass( "show" );
 }
 
