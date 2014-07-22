@@ -123,7 +123,7 @@ function inputEnd(){
     });
 };*/
 
-function callApi( hlatitute, hlongitude ){
+function callApi( hlatitude, hlongitude ){
 	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 		+"home_latitude="
 		+hLatitude
