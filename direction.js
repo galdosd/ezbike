@@ -115,10 +115,11 @@ function callApi( hLatitude, hLongitude ){
 			data = $.parseJSON(data);
 			answer(data);
 			console.log( "answer" );
+		},
+		complete: function(data) {
+			console.log(data)
+			console.log( "complete" );
 		}
-		//complete: function(data) {
-		//	console.log(data)
-		//}
     });
 };
 
