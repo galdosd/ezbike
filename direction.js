@@ -127,14 +127,14 @@ function inputEnd(){
 };*/
 
 function callApi( hLatitude, hLongitude ){
-	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
+ 	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
 		+"home_latitude="
 		+hLatitude
 		+"&home_longitude="
 		+hLongitude
 		+"&work_latitude=55.714"
 		+"&work_longitude=-65.989", answer
-	);
+    );
 };
 
 
