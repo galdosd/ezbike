@@ -83,13 +83,12 @@ body {
 
 #resultArea {
 	height:						170px;
-	width:						55%;
+	width:						40%;
 	margin:						auto;
 	border-radius:				2px;
 	background-color:			rgba(194, 231, 195, 0.8);
 	font-size: 					110%;
 	padding:					7px;
-	padding-left:				5%;
 	font-size: 					110%;
 	display:					block;
 	overflow: 					auto;
