@@ -114,6 +114,7 @@ function callApi( hLatitude, hLongitude ){
 			console.log(data);
 			data = $.parseJSON(data);
 			answer(data);
+			console.log( "answer" );
 		},
 		complete: function(data) {
 			console.log(data)
