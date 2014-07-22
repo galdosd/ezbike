@@ -111,8 +111,8 @@ function callApi( hLatitude, hLongitude ){
 		jsonpCallback: 'jsonCallback',
 		// contentType: "application/json",
 		success: function(data) {
-			console.log(data);
-			data = $.parseJSON(data);
+			//console.log(data);
+			//data = $.parseJSON(data);
 			answer(data);
 			console.log( "answer" );
 		},
