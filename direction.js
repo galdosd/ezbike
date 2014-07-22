@@ -130,7 +130,7 @@ function callApi( hlatitute, hlongitude ){
 		+"&home_longitude="
 		+hLongitude
 		+"&work_latitude=55.714"
-		+"&work_longitude=-65.989"), answer
+		+"&work_longitude=-65.989", answer
 	);
 };
 
