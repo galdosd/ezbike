@@ -51,7 +51,7 @@ function callNav( e ){
 var inputS = $( "#sFind" );
 inputS.click( inputStart );
 
-//var start = $( "#start" ).val();
+var start = $( "#start" ).val();
 
 function inputStart( e ){
 
@@ -72,6 +72,10 @@ function inputStart( e ){
 var inputE = $( "#eFind" );
 inputE.click( inputEnd );
 
+start.keypress( function (e){
+ console.log(e);
+
+});
 function inputEnd(){
 	var latitude = $( "#endLat" ).text().trim();
 	var longitude =$( "#endLong" ).text().trim();
