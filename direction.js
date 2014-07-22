@@ -74,13 +74,13 @@ inputE.click( inputEnd );
 
 start.keypress( function (e){
  console.log(e);
-
 });
+
 function inputEnd(){
 	var latitude = $( "#endLat" ).text().trim();
 	var longitude =$( "#endLong" ).text().trim();
 	callApiE( latitude, longitude ); 
-}
+};
 
 /*function callApi( hLatitude, hLongitude, wLatitude, wLongitude ){
  	$.getJSON( "http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?"
