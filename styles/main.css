@@ -83,7 +83,7 @@ body {
 
 #resultArea {
 	height:						170px;
-	width:						40%;
+	width:						35%;
 	margin:						auto;
 	border-radius:				2px;
 	background-color:			rgba(194, 231, 195, 0.8);
@@ -100,8 +100,8 @@ body {
 	}
 
 	#resultArea {
-		width:					80%;
-		font-size:				80%;
+		width:					60%;
+		font-size:				100%;
 	}
 
 	body {
