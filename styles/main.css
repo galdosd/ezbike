@@ -30,7 +30,7 @@ body {
 	height:						70px;			
 }
 
-.hide #sAt #eAt {
+.hide, #sAt, #eAt {
 	display:					none;
 }
 
