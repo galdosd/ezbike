@@ -87,9 +87,9 @@ body {
 	margin:						auto;
 	border-radius:				2px;
 	background-color:			rgba(194, 231, 195, 0.8);
-	padding:					10px;
 	font-size: 					110%;
-	padding:					5px;
+	padding:					7px;
+	padding-left:				10%;
 	font-size: 					110%;
 	display:					block;
 	overflow: 					auto;
