@@ -80,7 +80,6 @@ function inputStart( e ){
 	if ( sVal == "" || sVal == " " ) {
 		alert( "please enter an address" );
 		console.log( "what" );
-		e.stopPopogation();
 		return;
 	}
 
