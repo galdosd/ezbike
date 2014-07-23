@@ -35,6 +35,7 @@ var where = $( "#where" );
 var work = $( "#work" );
 var start = $( "#start" );
 var finish = $( "#finish" );
+var sVal = $( "#start" ).val();
 
 //
 
