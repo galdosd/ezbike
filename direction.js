@@ -77,7 +77,7 @@ function callNav( e ){
 function inputStart( e ){
 	console.log( "start working" );
 
-	if ( start == "" || start == " " ) {
+	if ( sVal == "" || sVal == " " ) {
 		alert( "please enter an address" );
 		console.log( "what" );
 		e.stopPopogation();
