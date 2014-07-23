@@ -76,18 +76,18 @@ function callNav( e ){
 function inputStart( e ){
 	console.log( "start working" );
 
-	/*if ( start == "" || start == " " ) {
+	if ( start == "" || start == " " ) {
 		alert( "please enter an address" );
 		console.log( "what" );
 		e.stopPopogation();
 		return;
-	}*/
+	}
 
-//	else { 
+	{ 
 		var latitude = $( "#startLat" ).text().trim();
 		var longitude =$( "#startLong" ).text().trim();	
 		callApi( latitude, longitude );
-//	}
+	}
 };
 
 function inputEnd(){
