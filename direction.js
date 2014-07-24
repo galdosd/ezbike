@@ -8,6 +8,12 @@ $("#start").geocomplete({
   detailsAttribute: "data-geo"
 });
 
+$("#start")
+  .geocomplete()
+  .bind("geocode:result", function(event, result){
+    console.log(result);
+  });
+
 $("#finish").geocomplete({
   details: ".details2",
   detailsAttribute: "data-geo"
