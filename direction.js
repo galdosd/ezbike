@@ -77,17 +77,17 @@ function callNav( e ){
 function inputStart( e ){
 	console.log( "start working" );
 
-	if ( sVal == "" || sVal == " " ) {
+	/*if ( sVal == "" || sVal == " " ) {
 		alert( "please enter an address" );
 		console.log( "what" );
 		return;
 	}
 
-	{ 
+	{*/ 
 		var latitude = $( "#startLat" ).text().trim();
 		var longitude =$( "#startLong" ).text().trim();	
 		callApi( latitude, longitude );
-	}
+	//}
 };
 
 function inputEnd(){
