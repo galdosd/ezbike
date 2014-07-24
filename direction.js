@@ -42,7 +42,7 @@ var sVal = $( "#start" ).val();
 Go.click( callNav );
 
 var inputS = $( "#sFind" );
-inputS.click( inputStart );
+start.click( inputStart );
 
 start.keypress( function (e){
 	if(e.which == 13){
