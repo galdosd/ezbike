@@ -5,12 +5,6 @@ body {
 	background-repeat: 			no-repeat;
 }
 
-.words {
-	display:					none;
-
-
-}
-
 .show {
 	-webkit-transition: background-color ease-in 1s;
 	/*-moz-transition: all ease-in 1s;
@@ -30,8 +24,12 @@ body {
 	height:						70px;			
 }
 
-.hide, #sAt, #eAt {
+.hide, #sAt, #eAt, .words {
 	display:					none;
+}
+
+.showO {
+	display:					block;
 }
 
 .form-group {

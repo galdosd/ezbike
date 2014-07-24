@@ -100,6 +100,7 @@ function inputStart( e ){
 		var latitude = $( "#startLat" ).text().trim();
 		var longitude =$( "#startLong" ).text().trim();	
 		callApi( latitude, longitude );
+		$( "sAt" ).addClass( "showO" );
 	//}
 };
 
