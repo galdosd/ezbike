@@ -22,7 +22,7 @@ body {
 	height:						70px;			
 }
 
-.hide, #sAt, #eAt, .words {
+.hide, .sAt, #eAt, .words {
 	display:					none;
 }
 
