@@ -89,6 +89,8 @@ function callNav( e ){
 
 function inputStart( e ){
 	console.log( "start working" );
+	var sAt = $( ".sAt" );
+	sAt.addClass( "showS" );
 
 	/*if ( sVal == "" || sVal == " " ) {
 		alert( "please enter an address" );
@@ -100,7 +102,6 @@ function inputStart( e ){
 		var latitude = $( "#startLat" ).text().trim();
 		var longitude =$( "#startLong" ).text().trim();	
 		callApi( latitude, longitude );
-		$( "#sAt" ).addClass( "showS" );
 	//}
 };
 
