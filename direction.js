@@ -27,8 +27,6 @@ function hide(){
 	words.removeClass( "show" );
 }
 
-
-
 //http://ezbike.xweb.service.cmwp.com/cgi-bin/report.pl?home_latitude=5.5&home_longitude=0&work_latitude=40.714&work_longitude=-73.989
 var Go = $( "#go" );
 var where = $( "#where" );
@@ -106,6 +104,7 @@ function inputStart( e ){
 };
 
 function inputEnd(){
+	$( ".eAt").addClass( "showS" );
 	var latitude = $( "#endLat" ).text().trim();
 	var longitude =$( "#endLong" ).text().trim();
 	callApiE( latitude, longitude ); 
