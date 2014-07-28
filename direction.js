@@ -89,8 +89,7 @@ function callNav( e ){
 
 function inputStart( e ){
 	console.log( "start working" );
-	var sAt = $( ".sAt" );
-	sAt.addClass( "showS" );
+	$( "#WHAT" ).removeClass( ".sAt" );
 
 	/*if ( sVal == "" || sVal == " " ) {
 		alert( "please enter an address" );
