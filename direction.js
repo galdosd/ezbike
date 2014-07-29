@@ -81,6 +81,7 @@ function callNav( e ){
 		where.text( "The latitude is "
 		 + latitude
 		 + " and the longitude is " + longitude + " good luck");
+		$( ".sAt").addClass( "showS" );
 		callApi( latitude, longitude );
 	}); 
 };
