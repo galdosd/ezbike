@@ -132,6 +132,10 @@ body {
 
 }*/
 
+.show {
+	font-size:					75%;
+}
+
 .btn {
 	margin:						20px auto;
 	width:						60%;
