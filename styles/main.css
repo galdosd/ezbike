@@ -22,6 +22,10 @@ body {
 	position:					absolute;
 }
 
+#about:hover {
+	color:	blue;
+}
+
 #frame {
 	width:						100%;
 	height:						70px;			
