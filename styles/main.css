@@ -22,6 +22,10 @@ body {
 	position:					absolute;
 }
 
+.x {
+	float:						right;
+}
+
 #about:hover {
 	color:	blue;
 }
